@@ -14,5 +14,26 @@
           命令1:  cd
           输入:[onlywell@localhost home]$ cd
           输出:[onlywell@localhost ~]$ 
+          命令2:　cd ~
+          输入:[onlywell@localhost home]$ cd ~
+          输出:[onlywell@localhost ~]$ 
+       eg4:跳转到指定目录
+          命令:cd /opt/rh
+          输入:[onlywell@localhost ~]$ cd /opt/rh
+          输出:[onlywell@localhost rh]$ 
+          说明:跳转到指定目录,从根目录开始,目录名称前加/,当前目录内的子目录直接写名称即可
+       eg5:返回到进入此目录之前所在的目录
+          命令: cd -
+          输入:[onlywell@localhost rh]$ cd -
+          输出: /home/onlywell
+               [onlywell@localhost ~]$ 
+       eg6: 把上个命令的参数作为cd参数使用
+          命令: cd !$
+          输入:[onlywell@localhost ~]$ cd !$
+          输出: cd -
+                /opt/rh
+                [onlywell@localhost rh]$ 
 
+
+          
 
