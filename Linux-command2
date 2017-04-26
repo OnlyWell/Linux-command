@@ -1,0 +1,18 @@
+------------------------------------------------------cd  command---------------------------------------------------
+    1.命令格式
+      cd [目录名]
+    2.命令功能
+      切换当前目录到dirName
+    3.eg1:进入系统根目录
+         输入:[onlywell@localhost Desktop]$ cd /
+         输出:[onlywell@localhost /]$ 
+      eg2: cd..或 cd ..//
+          输入:[onlywell@localhost home]$ cd ..//
+          输出:[onlywell@localhost /]$ \
+      eg3:使用cd命令进入当前用户主目录
+          "当前用户主目录"和"系统根目录"是两个不同的概念.进入当前用户主目录有两个方法.
+          命令1:  cd
+          输入:[onlywell@localhost home]$ cd
+          输出:[onlywell@localhost ~]$ 
+
+
