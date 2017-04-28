@@ -1,0 +1,80 @@
+----------------------------------------------------mkdir-----------------------------------------------
+  1.命令格式
+    mkdir [选项] 目录...
+  2.命令功能:
+    通过mkdir命令可以实现在制定位置创建以DirName(指定的文件名)命名的文件夹或目录.要创建的文件夹或目录的用户必须所创建的文件夹的
+    父文件夹具有写权限.并且,所创建的文件夹(目录)不能与其父目录(即父文件夹)中的文件名重名,即同一个目录下不能有同名的(区分大小写)
+  3.命令参数:
+    -m, --mode=模式,设定权限<模式>(类似chmod),而不是rwxrwxrwx或umask
+    -p, --parents可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建好哪些尚不存在的目录,即一次可以建立
+         多个目录;
+    -v, --verbose 每次创建新目录都显示信息
+    --help 显示此帮助信息并退出
+    --version 输出版本信息并退出
+  4.命令实例
+    eg1:创建一个空目录
+        命令:
+          mkdir test1
+        输出:
+              [haoyanfei@localhost ~]$ mkdir test1
+              [haoyanfei@localhost ~]$ ls
+              Desktop    Downloads  Pictures  Templates  Videos
+              Documents  Music      Public    test1
+    eg2:递归创建多个目录
+        命令:
+          mkdir -p test2/test2
+        输出:
+              [haoyanfei@localhost ~]$ mkdir -p test2/test2
+              [haoyanfei@localhost ~]$ ls -l
+              总用量 0
+              drwxr-xr-x. 2 haoyanfei haoyanfei  6 4月  27 14:42 Desktop
+              drwxr-xr-x. 2 haoyanfei haoyanfei  6 4月  27 14:42 Documents
+              drwxr-xr-x. 2 haoyanfei haoyanfei  6 4月  27 14:42 Downloads
+              drwxr-xr-x. 2 haoyanfei haoyanfei  6 4月  27 14:42 Music
+              drwxr-xr-x. 2 haoyanfei haoyanfei  6 4月  27 14:42 Pictures
+              drwxr-xr-x. 2 haoyanfei haoyanfei  6 4月  27 14:42 Public
+              drwxr-xr-x. 2 haoyanfei haoyanfei  6 4月  27 14:42 Templates
+              drwxrwxr-x. 3 haoyanfei haoyanfei 19 4月  28 11:22 test2
+              drwxr-xr-x. 2 haoyanfei haoyanfei  6 4月  27 14:42 Videos
+              [haoyanfei@localhost ~]$ 
+     eg3:创建权限为777的目录
+         命令:mkdir -m 777 test3
+         输出:
+              [haoyanfei@localhost ~]$ mkdir -m 777 test3
+              [haoyanfei@localhost ~]$ ls -a
+              .              .bashrc    Downloads      .mozilla            Templates
+              ..             .cache     .esd_auth      Music               test2
+              .bash_history  .config    .ICEauthority  Pictures            test3
+              .bash_logout   Desktop    .java          Public              Videos
+              .bash_profile  Documents  .local         .speech-dispatcher
+         说明:test3的权限为rwxrwxrwx
+      eg4:创建新目录都显示信息
+          命令:mkdir -v test4
+          输出:
+              [haoyanfei@localhost test3]$ mkdir -v test4
+              mkdir: 已创建目录 "test4"
+              [haoyanfei@localhost test3]$ mkdir -pv test5/test5-1
+              mkdir: 已创建目录 "test5"
+              mkdir: 已创建目录 "test5/test5-1"
+              [haoyanfei@localhost test3]$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
