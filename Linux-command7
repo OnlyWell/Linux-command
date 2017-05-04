@@ -85,7 +85,41 @@
        eg7:移动当前文件夹下的所有文件到上一级目录
           命令: mv * ../
           输出:
-     
+          [haoyanfei@localhost dir2]$ touch t1,txt t2.txt
+          [haoyanfei@localhost dir2]$ mv * ../
+          [haoyanfei@localhost dir2]$ ls
+          [haoyanfei@localhost dir2]$ cd ..
+          [haoyanfei@localhost test3]$ ls
+          dir1  dir2  log2.txt  log3.txt  t1,txt  t2.txt  test1.txt
+      eg8:把当前目录的一个子目录里的文件移动到另一个子目录里
+          命令: mv test3/*.txt test5
+          输出:
+                [haoyanfei@localhost ~]$ mkdir test5
+                [haoyanfei@localhost ~]$ mv test3/*.txt test5
+                [haoyanfei@localhost ~]$ cd test5
+                [haoyanfei@localhost test5]$ ls
+                log2.txt  log3.txt  t2.txt  test1.txt
+       eg9:文件覆盖前做简单备份,前面加参数-b
+          命令:
+                mv log1.txt -b log2.txt
+          输出:
+                [haoyanfei@localhost test5]$ ls
+                log2.txt  log3.txt  t2.txt  test1.txt
+                [haoyanfei@localhost test5]$ mv log2.txt -b log3.txt
+                [haoyanfei@localhost test5]$ ls
+                log3.txt  log3.txt~  t2.txt  test1.txt
+            说明:
+                -b 不接受参数,mv会去读取环境变量VERSION_CONTROL来作为备份策略.
+                -backup该选项指定如果目标文件存在的动作,共有四种备份策略:
+                1.CONTROL=none或o0ff:不备份
+                2.CONTROL=numbered或t:数字编号的备份
+                3.CONTROL=existing或nil:如果存在数字编号的备份,则继续编号备份m+1...n:
+                执行mv操作前存在以数字编号的文件log2.txt~1~,那么再次执行将产生log2.txt~2@,一次类推.如果之前没有
+                以数字编号的文件,则使用下面的简单备份
+                4.CONTROL=simple或never:使用简单备份:在被覆盖前进行了简单备份,简单备份只能有一份,再次被覆盖时,简单备份
+                也会被覆盖.
+
+
      
      
      
