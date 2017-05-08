@@ -14,4 +14,11 @@
        -backup [=CONTROL]   为每个已存在的目标文件创建备份
        -b   类似backup 但不接受参数
        -copy - contents  在递归处理是复制特殊文件内容
+       -d   等于-no -dereference - preserve=links
+       -f,-force 如果目标文件无法打开则将其移除并重试(当-n选项存在时则不需再选此项)
+       -i,-interactive  覆盖前询问(使前面的 -n选项失效)
+       -H   跟随源文件中的命令行符号链接
+       -l,-link 链接文件而不复制
+       -L,-dereference  总是跟随符号链接
+       -n, -no-clobber  不要覆盖已存在的文件(是前面的-i选项失效)
 
