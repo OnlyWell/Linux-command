@@ -1,0 +1,9 @@
+1.Docker组件与元素
+  组件:
+    1>Docker Client: 用户界面,支持用户与Docker Daemon之间通信.
+    2>Docker Daemon: 运行于主机上,处理服务请求
+    3>Docker Index : 中央registry,支持拥有公有与私有访问权限的Docker容器镜像的备份.
+  基本元素:
+    1>Docker Containers : 负责应用程序的运行,包括操作系统,用户添加的文件以及元数据
+    2>Docker Images: 一个只读模板,用来运行Docker容器.
+    3>Docker File: 文件指令集,用来说明如何自动创建Docker镜像.
