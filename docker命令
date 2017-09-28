@@ -1,0 +1,19 @@
+1.docker info   --查看docker信息
+
+2.docker logs $current_job   --查看当前job(Container)的状态
+
+3.docker help
+
+4.docker stop $current_job   --停掉当前容器
+
+5.docker restart $current_job --重启当前容器
+
+6.移除容器(先停止,再移除)
+  
+  docker stop $current_job
+  docker rm $current_job
+7.docker commit $sample_job job1 将容器的状态保存为镜像 [镜像名称只能取 a-z 和 0-9]
+
+8.docker images  --查看所有镜像列表
+
+  
